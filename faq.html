@@ -1,0 +1,222 @@
+<html>
+
+<head>
+    <title>Recipe Sharing FAQ Page</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/favicon-chitkara.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .header {
+            background-image: url('https://img.freepik.com/premium-photo/food-background-black-herbs-spices-utensil-top-view-with-space-text_1040174-357.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+
+        .content {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            color: #888;
+            margin-bottom: 50px;
+        }
+
+        .terms {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .term-item {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 15px 20px;
+            margin: 10px;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: #555;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .term-item:hover {
+            background-color: #e0e0e0;
+        }
+
+        .term-item i {
+            color: red;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .term-detail {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .term-item.active i {
+            transform: rotate(45deg);
+        }
+
+        .term-item.active .term-detail {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            max-height: 200px;
+            /* Adjust as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        FAQ PAGE
+    </div>
+
+    <div class="content">
+        <h2 style="margin-bottom: 50px;text-align:left; margin-left: 20px"><a href="index.html" style="text-decoration: none; color:#888">Home </a></h2>
+        <h2>OUR TERMS</h2>
+        <div class="terms">
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to submit a recipe?
+                <div class="term-detail">
+                    To submit a recipe, click on the "Submit Recipe" button on the homepage and fill out the form with
+                    your recipe details.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to edit my recipe?
+                <div class="term-detail">
+                    To edit your recipe, go to your profile, find the recipe you want to edit, and click the "Edit"
+                    button.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to delete a recipe?
+                <div class="term-detail">
+                    To delete a recipe, go to your profile, find the recipe you want to delete, and click the "Delete"
+                    button.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to rate a recipe?
+                <div class="term-detail">
+                    To rate a recipe, go to the recipe page and click on the stars to give your rating.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to comment on a recipe?
+                <div class="term-detail">
+                    To comment on a recipe, go to the recipe page and write your comment in the comment section.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to share a recipe?
+                <div class="term-detail">
+                    To share a recipe, click on the "Share" button on the recipe page and choose your preferred sharing
+                    method.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to save a recipe?
+                <div class="term-detail">
+                    To save a recipe, click on the "Save" button on the recipe page and it will be added to your saved
+                    recipes list.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to follow a chef?
+                <div class="term-detail">
+                    To follow a chef, go to their profile and click the "Follow" button.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to search for recipes?
+                <div class="term-detail">
+                    To search for recipes, use the search bar at the top of the homepage and enter keywords related to
+                    the recipe you are looking for.
+                </div>
+            </div>
+            <div class="term-item" onclick="toggleDetail(this)">
+                <i class="fas fa-plus"></i>
+                How to print a recipe?
+                <div class="term-detail">
+                    To print a recipe, go to the recipe page and click on the "Print" button to get a printer-friendly
+                    version.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDetail(element) {
+            var detail = element.querySelector('.term-detail');
+            var icon = element.querySelector('i');
+            if (element.classList.contains('active')) {
+                element.classList.remove('active');
+                detail.style.maxHeight = '0';
+                detail.style.opacity = '0';
+                detail.style.transform = 'translateY(-10px)';
+            } else {
+                var activeItems = document.querySelectorAll('.term-item.active');
+                activeItems.forEach(function (item) {
+                    item.classList.remove('active');
+                    var activeDetail = item.querySelector('.term-detail');
+                    activeDetail.style.maxHeight = '0';
+                    activeDetail.style.opacity = '0';
+                    activeDetail.style.transform = 'translateY(-10px)';
+                });
+                element.classList.add('active');
+                detail.style.maxHeight = '200px'; /* Adjust as needed */
+                detail.style.opacity = '1';
+                detail.style.transform = 'translateY(0)';
+            }
+        }
+    </script>
+</body>
+
+</html>

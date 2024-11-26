@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEE Project - Recipe Sharing Platform</title>
+    <link rel="icon" type="image/x-icon" href="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/favicon-chitkara.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header >
+        <div class="logo">Rasoi Adda</div>
+        <nav>
+            <a href="#hero">Home</a> 
+            <a href="search.html">Recipes</a>
+            <a href="aboutus.html">About</a> 
+            <a href="#contact">Contact</a>
+            <a href="#favorited-recipes" id="favorites-link">Favorites</a>
+        </nav>
+        <div>
+            <a href="login.html" class="btn-login">Login</a>
+            <a href="signup.html" class="btn-signup">Sign Up</a>
+        </div>
+    </header>
+
+    <div id="hero" class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Rasoi Adda!</h1>
+            <p>Your go-to platform for delicious recipes!</p>
+            <p>Explore a variety of recipes and share your culinary creations.</p>
+            <div class="hero-button">
+                <a href="login.html" class="submit-recipe-button"><i class="fas fa-upload"></i>Upload Recipe</a>
+                <a href="faq.html" class="learn-more-button">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="img/hero1.jpg" alt="Hero Image 1"></div>
+                    <div class="slide"><img src="img/hero2.jpg" alt="Hero Image 2"></div>
+                    <div class="slide"><img src="img/hero3.jpg" alt="Hero Image 3"></div>
+                    <div class="slide"><img src="img/hero4.jpg" alt="Hero Image 4"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    </div>
+
+    
+    <div id="my-recipes" class="my-recipes" style="display: none;">
+        <h2>My Recipes</h2>
+        <div class="my-recipe-cards">
+        </div>
+    </div>
+    
+    <div id="featured-recipes" class="featured-recipes">
+        <h2 style="display: inline-block;">Featured Recipes</h2>
+        <div class="search-container">
+            <input type="text" id="recipe-search" placeholder="Search recipes..." />
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+    
+        <div class="recipe-list">
+            <div class="recipe-card" data-recipe-id="1">
+                <h3><i class="far fa-star favorite" data-favorite="false"></i> <span><a href="https://youtu.be/bX7AyuNMrVY?si=N-yewUqFliY4ljUL" target="_blank">Butter
+                            Chicken</a></span></h3>
+                <a href="butter-chicken.html"><img
+                        src="https://www.simplyrecipes.com/thmb/LYwosfrO2cGCT2_bGS5wIeHRnd8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__01__Butter-Chicken-LEAD-1-f8a0cd09ea9442ce93651887f164db03.jpg"
+                        alt="Butter Chicken" style="width: 100%; border-radius: 10px;"></a>
+                <p>Butter Chicken is a classic Indian dish made with tender chicken pieces simmered in a rich and creamy
+                    tomato-based sauce.</p>
+                <p><strong>Ingredients:</strong> Chicken, butter, cream, tomatoes, spices.</p>
+                <p><strong>Servings:</strong> <i class=" fas fa-solid fa-users fa-lg"></i> 4</p>
+                <p><strong>Type:</strong> Non-Vegetarian</p>
+            </div>
+            
+            <div class="recipe-card" data-recipe-id="2">
+                <h3><i class="far fa-star favorite" data-favorite="false"></i> <span><a href="https://youtu.be/c-oVDb-O2Q8?si=uRM6Ca8lN0wBLrxn" target="_blank">Paneer
+                            Tikka</a></span></h3>
+                <a href="paneer-tikka.html"><img
+                        src="https://spicecravings.com/wp-content/uploads/2020/10/Paneer-Tikka-Featured-1.jpg" alt="Paneer Tikka"
+                        style="width: 100%; border-radius: 10px;"></a>
+                <p>Paneer Tikka is a popular vegetarian dish consisting of marinated paneer cubes grilled to perfection.</p>
+                <p><strong>Ingredients:</strong> Paneer, yogurt, spices, bell peppers.</p>
+                <p><strong>Servings:</strong> <i class="fa-solid fa-user-group"></i> 2</p>
+            </div>
+            
+            <div class="recipe-card" data-recipe-id="3">
+                <h3><i class="far fa-star favorite" data-favorite="false"></i> <span><a href="chole-bhature.html">Chole
+                            Bhature</a></span></h3>
+                <a href="chole-bhature.html"><img
+                        src="https://en-media.thebetterindia.com/uploads/2022/08/chole-bhature-1660981563.jpg" alt="Chole Bhature"
+                        style="width: 100%; border-radius: 10px;"></a>
+                <p>Chole Bhature is a traditional North Indian dish made with spicy chickpeas served with deep-fried bread.</p>
+                <p><strong>Ingredients:</strong> Chickpeas, spices, flour, yogurt.</p>
+                <p><strong>Servings:</strong> <i class="fas fa-users fa-lg"></i> 3</p>
+                <p><strong>Type:</strong> Vegetarian</p>
+            </div>
+            
+            <div class="recipe-card" data-recipe-id="4">
+                <h3><i class="far fa-star favorite" data-favorite="false"></i> <span><a href="dal-makhni.html">Dal
+                            Makhani</a></span></h3>
+                <a href="dal-makhni.html"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHcaP4-2I5Dj9oMdWHFSDD_WVCXH5xbFimwQ&s"
+                        alt="Dal Makhani" style="width: 100%; border-radius: 10px;"></a>
+                <p>Dal Makhani is a rich and creamy lentil dish made with black lentils and kidney beans.</p>
+                <p><strong>Ingredients:</strong> Black lentils, kidney beans, cream, spices.</p>
+                <p><strong>Servings:</strong> <i class="fas fa-users fa-lg"></i> 3</p>
+                <p><strong>Type:</strong> Vegetarian</p>
+            </div>
+            
+            <div class="recipe-card" data-recipe-id="5">
+                <h3><i class="far fa-star favorite" data-favorite="false"></i> <span><a href="palak-paneer.html">Palak
+                            Paneer</a></span></h3>
+                <a href="palak-paneer.html"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTa0vMZXRWCqeT6LPG6YbA2wDxk8iisAMwQw&s"
+                        alt="Palak Paneer" style="width: 100%; border-radius:  10px;"></a>
+                <p>Palak Paneer is a creamy spinach curry made with paneer, spinach puree, and spices.</p>
+                <p><strong>Ingredients:</strong> Paneer, spinach, cream, spices.</p>
+                <p><strong>Servings:</strong> <i class="fas fa-users fa-lg"></i> 4</p>
+                <p><strong>Type:</strong> Vegetarian</p>
+            </div>
+            
+            
+            <div class="recipe-card" data-recipe-id="6">
+                <h3><i class="far fa-star favorite" data-favorite="false"></i> <span><a href="biryani.html">Biryani</a></span></h3>
+                <a href="biryani.html"><img
+                        src="https://c.ndtvimg.com/2022-04/fq5cs53_biryani-doubletree-by-hilton_625x300_12_April_22.jpg"
+                        alt="Biryani" style="width: 100%; border-radius: 10px;"></a>
+                <p>Biryani is a fragrant rice dish made with spices, meat, and vegetables.</p>
+                <p><strong>Ingredients:</strong> Basmati rice, meat, spices, saffron.</p>
+                <p><strong>Servings:</strong> <i class="fas fa-users fa-lg"></i> 3</p>
+                <p><strong>Type:</strong> Non-Vegetarian</p>
+            </div>
+        </div>
+    
+        <div id="no-recipes-message" style="display: none;">No recipes found.</div>
+    </div>
+    <div id="favorited-recipes" class="favorited-recipes" style="display: none;">
+        <h2>Favorited Recipes</h2>
+        <div class="recipe-list"></div>
+        <p class="no-favorites-message" >Add some of your favorite recipes!</p>
+    </div>
+
+    <div id="submit-recipe" class="submit-recipe">
+        <h2>Submit a Recipe</h2>
+        <form id="recipe-form">
+            <div class="form-group">
+                <label for="recipe-name">Recipe Name: <span class="required">*</span></label>
+                <input type="text" id="recipe-name" name="recipe-name" placeholder="e.g., Butter Chicken" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredients: <span class="required">*</span></label>
+                <textarea id="ingredients" name="ingredients"
+                    placeholder="e.g., 500g chicken, 2 cups yogurt, 1 onion, spices..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="description">Description: <span class="required">*</span></label>
+                <textarea id="description" name="description"
+                    placeholder="A brief description of the dish, its origin, and taste..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="servings">Servings:</label>
+                <input type="range" id="servings" name="servings" min="0" max="4" value="0" step="1"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>0</output>
+            </div>
+            <div class="form-group type">
+                <label for="type">Type:</label>
+                <div>
+                    <label for="veg">
+                        <input type="radio" id="veg" name="type" value="veg" checked> Vegetarian
+                    </label>
+                    <label for="non-veg">
+                        <input type="radio" id="non-veg" name="type" value="non-veg"> Non-Vegetarian
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="youtube-link">YouTube Link:</label>
+                <input type="url" id="youtube-link" placeholder="e.g., https://youtube.com/example-video" name="youtube-link">
+            </div>
+            <div class="form-group">
+                <label for="thumbnail">Thumbnail:</label>
+                <input type="file" id="thumbnail" name="thumbnail">
+            </div>
+            <button type="submit">Submit Recipe</button>
+        </form>
+    </div>
+
+    <div id="contact" class="contact"> 
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                <p>info@rasoiadda.com</p>
+            </div>
+            <div class="contact-item">
+                <h3><i class="fa-solid fa-phone"></i> Phone</h3>
+                <p>(+91) 123-456-7890</p>
+            </div>
+            <div class="contact-item">
+                <h3><i class="fa-solid fa-location-dot"></i> Address</h3>
+                <p>123 Food Lane, Flavor Town, India</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="about"> 
+        <div class="footer-container">
+            <div class="footer-section newsletter">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Subscribe to our newsletter for the latest updates on new features and product releases.</p>
+                <input type="email" placeholder="Enter your email">
+                <input type="submit" id="subscribe-button" value="Subscribe">
+            </div>
+            <div class="footer-section company-details">
+                <h3>Company</h3>
+                <a href="aboutus.html">About Us</a>
+                <p>Contact Us</p>
+                <a href="faqs.html">FAQs</a>
+                <p>Blog</p>
+                <a href="#featured-recipes">Recipes</a>
+            </div>
+            <div class="footer-section explore-section">
+                <h3>Explore</h3>
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+                <p>Cookies Policy</p>
+                <a href="signup.html" style="display: block;">Sign Up</a>
+                <a href="login.html" style="display: block;">Login</a>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="#" target="_blank"><i class="fa-brands fa-square-facebook" ></i>Facebook</a>
+                <a href="#" target="_blank" class="instagram-hover">
+                    <i class="fab fa-instagram"></i>Instagram
+                </a>
+
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+                <a href="#" target="_blank" class="pinterest-hover"><i class="fab fa-pinterest"></i>Pinterest</a>
+                <a href="#" target="_blank" class="youtube-hover"><i class="fab fa-youtube"></i>YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-left">
+                <p>&copy; 2023 Recipe Sharing. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#">Privacy</a> | 
+                <a href="#">Terms</a> | 
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    
+        <div class="get-started-container">
+            <p><b>Discover Delicious Recipes.</b> </p> 
+            <p><b>Explore a wide range of mouth-watering recipes shared by our community of food enthusiasts.</b></p>
+            <a href="#hero" class="get-started-button">Get Started</a>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
+ 

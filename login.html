@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/favicon-chitkara.ico">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Abel|Playfair+Display|Vibur');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://wallpapers.com/images/featured/food-4k-1pf6px6ryqfjtnyr.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Vibur', cursive;
+            font-family: 'Abel', sans-serif;
+            opacity: .95;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            width: 450px;
+            min-height: 500px;
+            height: auto;
+            border-radius: 5px;
+            margin: auto;
+            box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+            padding: 2%;
+            background-color: white;
+            border: 1px solid red;
+        }
+
+        form .con {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        header {
+            margin: 2% auto 10% auto;
+            text-align: center;
+        }
+
+        header h2 {
+            font-size: 250%;
+            font-family: 'Playfair Display', serif;
+            color: red;
+        }
+
+        header p {
+            letter-spacing: 0.05em;
+        }
+
+        .input-item {
+            background: white;
+            color: red;
+            padding: 14.5px 0px 15px 9px;
+            border-radius: 5px 0px 0px 5px;
+            display: inline-block;
+            width: 40px;
+        }
+
+        input.form-input {
+            width: 200px;
+            height: 50px;
+            margin-top: 2%;
+            padding: 15px;
+            font-size: 16px;
+            font-family: 'Abel', sans-serif;
+            color: red;
+            outline: none;
+            border: 1px solid red;
+            border-radius: 0px 5px 5px 0px;
+            transition: 0.2s linear;
+            display: inline-block;
+        }
+
+        .field-set {
+            text-align: center;
+        }
+
+        .field-set input {
+            margin-bottom: 20px;
+        }
+
+        .field-set span {
+            margin-bottom: 20px;
+        }
+
+        button.log-in {
+            display: inline-block;
+            color: red;
+            width: 280px;
+            height: 50px;
+            padding: 0 20px;
+            background: white;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid red;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s linear;
+            margin: 7% auto;
+            letter-spacing: 0.05em;
+            box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+        }
+
+        button.log-in:hover {
+            transform: translatey(3px);
+            box-shadow: none;
+            background-color: #f7f7f7;
+            color: #e74c3c;
+        }
+
+        .other {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submits {
+            display: inline-block;
+        }
+
+        .frgt-pass,
+        .sign-up {
+            background: transparent;
+            color: red;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        i {
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <form>
+            <div class="con">
+                <header class="head-form">
+                    <h2>Log In</h2>
+                    <p>login here using your username and password</p>
+                </header>
+                <br>
+                <div class="field-set">
+                    <span class="input-item">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input class="form-input" id="txt-input" type="text" placeholder="Mobile No. or Email " required>
+                    <br>
+                    <span class="input-item">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <input class="form-input" type="password" placeholder="Password" id="pwd" name="password" required>
+                    <br>
+                    <button class="log-in">Log In</button>
+                </div>
+                <div class="other">
+                    <a class="frgt-pass" href="forgot.html"
+                        >Forgot
+                        Password</a>
+                    <span>|</span>
+                    <a class="sign-up"
+                        href="signup.html">Sign Up</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        const logInButton = document.querySelector('.log-in');
+
+        logInButton.addEventListener('click', function (event) {
+            event.preventDefault(); 
+            if (document.querySelector('form').reportValidity()) {
+                window.location.href = 'index2.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

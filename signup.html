@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/favicon-chitkara.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Abel|Playfair+Display|Vibur');
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url('https://wallpapers.com/images/featured/food-4k-1pf6px6ryqfjtnyr.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Vibur', cursive;
+        font-family: 'Abel', sans-serif;
+        opacity: .95;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    form {
+        width: 450px;
+        min-height: 400px;
+        height: auto;
+        border-radius: 5px;
+        margin: auto;
+        box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+        padding: 2%;
+        background-color: white;
+        border: 1px solid red;
+    }
+
+    form .con {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    header {
+        margin: 2% auto 10% auto;
+        text-align: center;
+    }
+
+    header h2 {
+        font-size: 250%;
+        font-family: 'Playfair Display', serif;
+        color: red;
+    }
+
+    header p {
+        letter-spacing: 0.05em;
+    }
+
+    .input-item {
+        background: white;
+        color: red;
+        padding: 14.5px 0px 15px 9px;
+        border-radius: 5px 0px 0px 5px;
+        display: inline-block;
+        width: 40px;
+    }
+
+    input[class="form-input"] {
+        width: 200px;
+        height: 50px;
+        margin-top: 2%;
+        padding: 15px;
+        font-size: 16px;
+        font-family: 'Abel', sans-serif;
+        color: red;
+        outline: none;
+        border: 1px solid red;
+        border-radius: 0px 5px 5px 0px;
+        transition: 0.2s linear;
+        display: inline-block;
+    }
+
+    .field-set {
+        text-align: center;
+    }
+
+    .field-set input {
+        margin-bottom: 20px;
+    }
+
+    .field-set span {
+        margin-bottom: 20px;
+    }
+
+    button {
+        display: inline-block;
+        color: red;
+        width: 280px;
+        height: 50px;
+        padding: 0 20px;
+        background: white;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid red;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.2s linear;
+        margin: 7% auto;
+        letter-spacing: 0.05em;
+        box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    }
+
+    button:hover {
+        transform: translatey(3px);
+        box-shadow: none;
+        background-color: #f7f7f7;
+        color: #e74c3c;
+    }
+
+    button:hover {
+        animation: ani9 0.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes ani9 {
+        0% {
+            transform: translateY(3px);
+        }
+
+        100% {
+            transform: translateY(5px);
+        }
+    }
+
+    i {
+        font-size: 24px;
+        color: red;
+    }
+
+    .login-link {
+        font-size: 16px;
+        color: red;
+        text-decoration: none;
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    .login-link:hover {
+        color: #e74c3c;
+    }
+</style>
+
+<body>
+
+    <div class="overlay">
+        <form id="signupForm" action="index2.html" method="GET" onsubmit="return validatePassword()">
+            <div class="con">
+                <header class="head-form">
+                    <h2>Sign Up</h2>
+                    <p>WELCOME TO RASOI ADDA</p>
+                    <p>Create your New Account Here</p>
+                </header>
+                <div class="field-set">
+                    <span class="input-item">
+                        <i class="fa fa-user-circle" style="font-size: 28px; color: red;"></i>
+                    </span>
+                    <input class="form-input" id="firstName" type="text" placeholder="First Name" required>
+                    <br>
+                    <span class="input-item">
+                        <i class="fa fa-phone" style="font-size: 24px; color: red;"></i>
+                    </span>
+                    <input class="form-input" id="phone" type="text" placeholder="Phone Number" required>
+                    <br>
+                    <span class="input-item">
+                        <i class="fa fa-envelope" style="font-size: 24px; color: red;"></i>
+                    </span>
+                    <input class="form-input" id="email" type="text" placeholder="Email" required>
+                    <br>
+                    <span class="input-item">
+                        <i class="fa fa-key" style="font-size: 24px; color: red;"></i>
+                    </span>
+                    <input class="form-input" type="password" placeholder="Enter Password" id="pwd" name="password"
+                        required>
+                    <br>
+                    <span class="input-item">
+                        <i class="fa fa-key" style="font-size: 24px; color: red;"></i>
+                    </span>
+                    <input class="form-input" type="password" placeholder="Confirm Password" id="confirmPwd"
+                        name="confirmPassword" required>
+                    <br>
+                    <button class="Sign-up" type="submit">Sign Up</button>
+                    <a href="login.html" class="login-link">Already have an account? Log In</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('pwd').value;
+            const confirmPassword = document.getElementById('confirmPwd').value;
+            const minLength = 6;
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+
+            // Check password validity (length and at least one letter and one number)
+            if (!regex.test(password)) {
+                alert("Password must be at least 6 characters long and contain both letters and numbers.");
+                return false;
+            }
+
+            return true;  // Form can be submitted
+        }
+    </script>
+</body>
+
+</html>

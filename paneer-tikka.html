@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paneer Tikka Recipe</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/favicon-chitkara.ico">
+
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+</head>
+<style>
+    /* Reset some default browser styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+
+    }
+
+    /* Main recipe container styling */
+    .recipe-detail {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 40px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+        display: flex;
+        gap: 20px;
+        animation: fadeIn 1s ease-in;
+    }
+
+    /* Recipe Image */
+    .recipe-detail img {
+        max-width: 100%;
+        border-radius: 10px;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        opacity: 0.95;
+    }
+
+    .recipe-detail img:hover {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    /* Recipe Content */
+    .recipe-content {
+        flex: 1;
+    }
+
+    /* Recipe Title */
+    .recipe-content h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        background: linear-gradient(45deg, green, green);
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: transform 0.3s ease;
+    }
+
+    .recipe-content h1:hover {
+        transform: scale(1.05);
+    }
+
+    /* Recipe Info Section */
+    .recipe-info {
+        font-size: 1.1em;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .recipe-info p {
+        margin: 5px 0;
+        font-weight: 500;
+    }
+
+    /* Ingredients and Instructions Headings */
+    .ingredients h2,
+    .instructions h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ff6347;
+        padding-bottom: 5px;
+    }
+
+    /* Ingredients List */
+    .ingredients ul {
+        list-style: disc;
+        margin-left: 20px;
+        color: #555;
+        margin-bottom: 20px;
+
+    }
+
+    .ingredients li,
+    .instructions li {
+        font-size: 1em;
+        line-height: 1.6;
+        margin: 5px 0;
+        padding-left: 5px;
+        margin-left: 15px
+    }
+
+    /* Back to Recipes Link */
+    .back-link {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+        color: #fff;
+        background-color: #ff6347;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-link:hover {
+        background-color: #ff4500;
+        transform: scale(1.05);
+    }
+
+    /* Animation for page load */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<body style="background-color: #86B971  ;">
+    <div class="recipe-detail">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkTmoN6HX1YlataD_t0nUSL1Re6-zhsCPikQ&s"
+            alt="Paneer Tikka" height="700px" width="400px">
+
+        <div class="recipe-content">
+            <h1>Paneer Tikka</h1>
+            <section class="recipe-info">
+                <p><strong>Serves:</strong> 4 people</p>
+                <p><strong>Preparation Time:</strong> 20 minutes</p>
+                <p><strong>Cooking Time:</strong> 30 minutes</p>
+                <p><strong>Total Time:</strong> 50 minutes</p>
+            </section>
+
+            <section class="ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Paneer 250-300g</li>
+                    <li>Yogurt 1/2 cup</li>
+                    <li>Red chili powder 1tsp</li>
+                    <li>Turmeric powder 1/4 tsp</li>
+                    <li> Garam Masala 1tsp</li>
+                    <li>Oil 1tsp</li>
+                    <li>Salt to taste</li>
+                    <li>Ginger garlic paste 1tsp</li>
+                </ul>
+            </section>
+
+            <section class="instructions">
+                <h2>Instructions</h2>
+                <ol>
+                    <li>In a bowl, mix together the yogurt, red chili powder, turmeric powder, garam masala,
+                        ginger-garlic paste, lemon juice, salt, and oil..</li>
+                    <li>Add the paneer cubes to the marinade, ensuring they are well coated</li>
+                    <li>Cover the bowl and refrigerate the mixture for at least 30 minutes (or up to 2 hours) to allow
+                        the flavors to meld.</li>
+                    <li>Preheat a grill or a grill pan. Brush it with some oil to prevent sticking</li>
+                    <li>Remove the paneer from the skewers or tray. Garnish with chopped coriander leaves and serve with
+                        lemon wedges and mint chutney on the side..</li>
+                </ol>
+            </section>
+
+            <a href="index.html" class="back-link">Back to Recipes</a>
+        </div>
+    </div>
+</body>
+
+</html>
